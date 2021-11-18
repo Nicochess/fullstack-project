@@ -1,0 +1,22 @@
+{
+  "name": "fullstack-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nicochess/fullstack-project.git"
+  },
+  "author": "Nicolas Magno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nicochess/fullstack-project/issues"
+  },
+  "homepage": "https://github.com/Nicochess/fullstack-project#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
