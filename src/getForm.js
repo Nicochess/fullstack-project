@@ -1,4 +1,4 @@
-import filterDb from "./filterDb.js"
+import userData from "./userData.js"
 
 function convertDate(dateStr){
     let date = new Date(dateStr)
@@ -11,7 +11,6 @@ const getDateArray = (startDate, endDate) => {
     let dates = []
 
     let dateStart = new Date(startDate)
-    
     let dateEnd = new Date(endDate)
 
     while (dateStart <= dateEnd) {
@@ -30,13 +29,11 @@ const getForm = (event) => {
     const dateEnd = form.dateEnd.value
     
     const user = {
-        "client" : form.clientType.value,
+        "plan" : form.clientType.value,
         "days": getDateArray(dateStart, dateEnd)
     }
     
-    filterDb(user)
+    userData(user)
 }
-
-
 
 export default getForm
