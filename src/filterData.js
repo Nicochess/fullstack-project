@@ -1,4 +1,4 @@
-function insertTotal (total, obj) {
+const insertTotal = (total, obj) => {
     if (total.plan == 'regular'){
         return obj.plan.regular.weekend * total.weekend + obj.plan.regular.weekday * total.weekday
     } else if (total.plan == 'premium'){
@@ -6,14 +6,14 @@ function insertTotal (total, obj) {
     }
 }
 
+import loadInScreen from "./loadInScreen.js"
+
 const filterData = async (total) => {
     const res = await fetch(`http://localhost:3000/hotels`)
     const data = await res.json()
 
     const dataToSort = data.map(obj => ({
-        "id": obj.id,
-        "name": obj.name,
-        "rating": obj.rating,
+        ...obj,
         "total": insertTotal(total, obj)
     }))
 
@@ -21,7 +21,8 @@ const filterData = async (total) => {
         return a["total"] - b["total"] || b["rating"] - a["rating"]
     })
 
-    console.log(dataSorted[0])
+    console.log(dataSorted)
+    loadInScreen(dataSorted)
 }
 
 export default filterData

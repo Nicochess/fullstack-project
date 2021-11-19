@@ -1,6 +1,6 @@
 import userData from "./userData.js"
 
-function convertDate(dateStr){
+const convertDate = (dateStr) => {
     let date = new Date(dateStr)
     let dateName = date.toLocaleDateString("pt-BR", {timeZone: 'UTC', weekday: 'long'})
     return dateName
