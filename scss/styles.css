@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Red+Hat+Display&family=Sarala:wght@700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  max-width: 100vw;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100vw;
+  font-size: 1.4rem;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60vh;
+  background: url("../images/header-background.png");
+}
+
+.page-header__title {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  color: #FFFFFF;
+  -webkit-filter: drop-shadow(0 0 10px black);
+          filter: drop-shadow(0 0 10px black);
+}
+
+.page-header__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  padding: 2.5rem 5rem;
+  border-radius: 2rem;
+  background: #F3F3F3;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+}
+
+.page-header__search * {
+  cursor: pointer;
+}
+
+.page-header__search *:not(label) {
+  -webkit-box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.page-header__search .date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.page-header__search .date-container .field-container:first-child {
+  border-right: 1px solid #999999;
+}
+
+.page-header__search .date-container .date-field {
+  width: 20rem;
+}
+
+.page-header__search .field-container {
+  position: relative;
+}
+
+.page-header__search .field-container label {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  color: #999999;
+}
+
+.page-header__search .label-plan::after {
+  content: '';
+  display: inline-block;
+  margin-left: .5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url("../images/user-solid.svg") no-repeat;
+}
+
+.page-header__search .label-start::after {
+  content: '';
+  display: inline-block;
+  margin-left: .5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url("../images/suitcase-rolling-solid.svg") no-repeat;
+}
+
+.page-header__search .label-end::after {
+  content: '';
+  display: inline-block;
+  margin-left: .5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url("../images/plane-departure-solid.svg") no-repeat;
+}
+
+.page-header__search .form-field {
+  height: 5rem;
+  padding: 2rem 0 0 .5rem;
+}
+
+.page-header__search #client-type {
+  border-radius: .5rem;
+  width: 12rem;
+}
+
+.page-header__search .submit-button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #FF0404;
+  color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+}
+/*# sourceMappingURL=styles.css.map */

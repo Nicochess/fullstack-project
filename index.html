@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Price Consult</title>
-</head>
-<body>
-    <header>
-        <h1>Ache o melhor hotel!</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/litepicker/dist/css/litepicker.css"/>
+    <link rel="stylesheet" href="./scss/styles.css" />
+    
+    <title>Seu Hotel</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <h1 class="page-header__title">Seu destino, nossa ajuda!</h1>
+      <form class="page-header__search" id="consult-prices">
+        <div class="date-container">
+            <div class="field-container">
+                <label for="date-start" class="label-date label-start">Chegada</label>
+                <input type="date" name="dateStart" id="date-start" class="form-field date-field" />
+              </div>
+              <div class="field-container">
+                <label for="date-end" class="label-date label-end">Saída</label>
+                <input type="date" name="dateEnd" id="date-end" class="form-field date-field"/>
+              </div>
+        </div>
+
+        <div class="field-container">
+          <label for="client-type" class="label-plan">Plano</label>
+          <select name="clientType" id="client-type" class="form-field">
+            <option value="regular">Regular</option>
+            <option value="premium">Fidelidade</option>
+          </select>
+        </div>
+
+        <button type="submit" class="submit-button" id="submit-form">Buscar</button>
+      </form>
     </header>
-    <section class="hotel-search">
-        <form action="" id="consult-prices">
 
-            <label for="dateStart">Chegada</label>
-            <input type="date" name="dateStart" id="date-start">
-
-            <label for="dateEnd">Saída</label>
-            <input type="date" name="dateEnd" id="date-end">
-
-            <label for="clientType">Selecione o plano:</label>
-            <select name="clientType" id="">
-                <option value="regular">Regular</option>
-                <option value="premium">Fidelidade</option>
-            </select>
-
-            <button type="submit" id="submit-form">Procurar</button>
-        </form>
-    </section>
     <section class="hotel-results">
-        
+      <article></article>
     </section>
 
     <script type="module" src="./app.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script src="./src/litepicker.js"></script>
+  </body>
 </html>
