@@ -9,7 +9,7 @@ const insertTotal = (total, obj) => {
 import loadInScreen from "./loadInScreen.js"
 
 const filterData = async (total) => {
-    const res = await fetch(`http://localhost:3000/hotels`)
+    const res = await fetch(`https://hotel-api-server.herokuapp.com/hotels`)
     const data = await res.json()
 
     const dataToSort = data.map(obj => ({
