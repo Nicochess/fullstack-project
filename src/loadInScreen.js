@@ -44,7 +44,6 @@ const loadInScreen = (data) => {
     </div>
     `
 
-    console.log(data)
     modal.appendChild(card)
 
     modal.style.display="flex"

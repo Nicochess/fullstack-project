@@ -4,6 +4,7 @@
   "description": "",
   "main": "package.json",
   "scripts": {
+    "start": "node server.js",
     "json-server": "json-server --watch db.json"
   },
   "repository": {

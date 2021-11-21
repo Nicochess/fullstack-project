@@ -6,5 +6,6 @@ new Litepicker({
     singleMode: false,
     allowRepick: true,
     numberOfColumns: isMobile,
-    numberOfMonths: isMobile
+    numberOfMonths: isMobile,
+    lang: "pt-BR"
   })

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Red+Hat+Display&family=Sarala:wght@700&display=swap");
 .hotel-results {
   display: none;
-  /* Hidden by default */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -9,16 +8,12 @@
       -ms-flex-align: center;
           align-items: center;
   position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   background-color: rgba(0, 0, 0, 0.616);
+  z-index: 1;
 }
 
 .card-hotel {
@@ -35,19 +30,20 @@
   padding: 2rem;
   border-radius: 1rem;
   background: #FFFFFF;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.25);
 }
 
 .card-hotel .flag {
   position: absolute;
-  right: 0;
   top: 3rem;
+  right: -.5rem;
   padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: bold;
   color: #FFFFFF;
-  border-radius: 1rem 0 0 1rem;
+  letter-spacing: .1rem;
+  border-radius: .5rem 0 0 1.5rem;
 }
 
 .card-hotel .flag.regular {
@@ -61,14 +57,13 @@
 .card-hotel .card-image {
   min-height: 20rem;
   width: 100%;
+  margin: 0 0 1rem;
   background: url("../images/hotel-fallback.jfif") no-repeat;
   background-size: cover;
   border-radius: 1rem;
-  margin: 0 0 1rem;
 }
 
 .card-hotel .card-content {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,6 +74,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
 }
 
 .card-hotel .card-content .card-title {
@@ -94,22 +90,22 @@
 }
 
 .card-hotel .card-content .plan-table {
+  margin: 2rem 0;
+  font-size: 1.3rem;
   border: 1px solid #c0c0c0;
   border-collapse: collapse;
-  font-size: 1.3rem;
-  margin: 2rem 0;
 }
 
 .card-hotel .card-content .plan-table th {
-  border: 1px solid #c0c0c0;
   padding: 0.7rem;
-  background: #f0f0f0;
   font-weight: 400;
+  background: #f0f0f0;
+  border: 1px solid #c0c0c0;
 }
 
 .card-hotel .card-content .plan-table td {
-  border: 1px solid #c0c0c0;
   padding: 0.7rem;
+  border: 1px solid #c0c0c0;
 }
 
 .card-hotel .card-content .plan-table .table-price {
@@ -123,9 +119,9 @@
   display: flex;
   width: 100%;
   padding: 0.7rem;
-  border-radius: 1rem;
-  background: #f0f0f0;
   font-weight: bold;
+  background: #f0f0f0;
+  border-radius: 1rem;
 }
 
 .card-hotel .card-content .card-total .total {
@@ -168,14 +164,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 2rem 1rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  padding: 2rem 1rem 0;
   background: url("../images/header-background.png");
   background-size: cover;
 }
@@ -202,10 +195,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
           flex-direction: column;
   width: 90%;
   padding: 2.5rem 2rem;
-  border-radius: 2rem;
   background: #F3F3F3;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 2rem;
 }
 
 .page-header__search * {
@@ -216,25 +207,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 0.5rem;
-  overflow: hidden;
 }
 
 .page-header__search .date-container .field-container:first-child {
-  border-right: 1px solid #999999;
+  border-right: 2px solid #F3F3F3;
 }
 
 .page-header__search .date-container .field-container {
   width: 50%;
 }
 
-.page-header__search .date-container .date-field {
-  width: 100%;
-}
-
 .page-header__search .field-container {
   position: relative;
   margin: 1rem 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 .page-header__search .field-container label {
@@ -280,23 +269,25 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .page-header__search .form-field {
   height: 5rem;
   padding: 2rem 0 0 .5rem;
-}
-
-.page-header__search #client-type {
   width: 100%;
-  border-radius: .5rem;
 }
 
 .page-header__search .submit-button {
   font-size: 1.4rem;
   font-weight: 700;
-  background-color: #FF0404;
-  color: #FFFFFF;
-  border-radius: 1rem;
   padding: 1rem 3rem;
+  margin-top: 1rem;
+  color: #FFFFFF;
+  background-color: #FF0404;
+  border-radius: 1rem;
+  -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+          filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
 }
 
 @media screen and (min-width: 768px) {
+  .page-header {
+    padding: 10rem 1rem 0;
+  }
   .page-header__search {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -311,8 +302,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 20%;
     margin: 0;
   }
-  .page-header__search #client-type {
-    width: 100%;
+  .page-header__search .submit-button {
+    margin: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */

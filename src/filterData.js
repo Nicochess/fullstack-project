@@ -21,8 +21,7 @@ const filterData = async (total) => {
     const dataSorted = dataToSort.sort(function(a, b) {
         return a["total"] - b["total"] || b["rating"] - a["rating"]
     })
-
-    console.log(dataSorted)
+    
     loadInScreen(dataSorted[0])
 }
 
