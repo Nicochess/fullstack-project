@@ -34,7 +34,7 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 10rem 0 0;
+    padding: 2rem 1rem 0;
     align-items: center;
     height: 100vh;
     background: url('../images/header-background.png');
@@ -42,9 +42,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{
 
     &__title {
         margin: 0 0 5rem;
-        font-family: $font-title;
-        font-weight: 400;
-        font-size: 5rem;
+        font: 5rem $font-title;
+        text-align: center;
         color: $light-white;
         filter: drop-shadow(0 0 10px rgb(0, 0, 0));
     }
@@ -52,18 +51,15 @@ input[type="date"]::-webkit-calendar-picker-indicator{
     &__search {
         display: flex;
         justify-content: space-between;
-        width: 70%;
-        padding: 2.5rem 5rem;
+        flex-direction: column;
+        width: 90%;
+        padding: 2.5rem 2rem;
         border-radius: 2rem;
         background: $search-background;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
 
         * {
             cursor: pointer;
-
-            &:not(label){
-                box-shadow: 3px 2px 4px 0 rgba(0, 0, 0, 0.25);
-            }
         }
 
         .date-container {
@@ -75,13 +71,18 @@ input[type="date"]::-webkit-calendar-picker-indicator{
                 border-right: 1px solid $label-color;
             }
 
+            .field-container {
+                width: 50%;
+            }
+
             .date-field {
-                width: 20rem;
+                width: 100%;
             }
         }
 
         .field-container {
             position: relative;
+            margin: 1rem 0;
 
             label {
                 display: flex;
@@ -126,8 +127,8 @@ input[type="date"]::-webkit-calendar-picker-indicator{
         }
 
         #client-type {
+            width: 100%;
             border-radius: .5rem;
-            width: 12rem;
         }
 
         .submit-button {
@@ -137,6 +138,29 @@ input[type="date"]::-webkit-calendar-picker-indicator{
             color: $light-white;
             border-radius: 1rem;
             padding: 1rem 3rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .page-header {
+        &__search {
+            flex-direction: row;
+            padding: 2.5rem 4rem;
+
+            .date-container {
+                width: 40%;
+            }
+
+            .field-container {
+                width: 20%;
+                margin: 0;
+            }
+
+            #client-type {
+                width: 100%;
+            }
         }
     }
 }
