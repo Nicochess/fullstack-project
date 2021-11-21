@@ -55,7 +55,7 @@ const loadInScreen = (data) => {
     }
 
     const rating = document.querySelector('.rating-container')
-    rating.style.width = `${data.rating * 15}px`
+    rating.style.width = `${data.rating * 16}px`
 }
 
 export default loadInScreen

@@ -26,24 +26,6 @@
         "regular": {"weekday": 220, "weekend": 150},
         "premium": {"weekday": 100, "weekend": 40}
       }
-  },
-  {
-    "id": 3,
-    "name": "Águas Mornas",
-    "rating": 4,
-    "plan": {
-      "regular": {"weekday": 220, "weekend": 150},
-      "premium": {"weekday": 100, "weekend": 40}
-    }
-  },
-  {
-    "id": 4,
-    "name": "Parque das Margaridas",
-    "rating": 5,
-    "plan": {
-      "regular": {"weekday": 110, "weekend": 90},
-      "premium": {"weekday": 80, "weekend": 80}
-    }
   }
   ]
 }
