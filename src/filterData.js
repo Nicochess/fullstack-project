@@ -14,6 +14,7 @@ const filterData = async (total) => {
 
     const dataToSort = data.map(obj => ({
         ...obj,
+        "userPlan": total.plan,
         "total": insertTotal(total, obj)
     }))
 
@@ -22,7 +23,7 @@ const filterData = async (total) => {
     })
 
     console.log(dataSorted)
-    loadInScreen(dataSorted)
+    loadInScreen(dataSorted[0])
 }
 
 export default filterData
