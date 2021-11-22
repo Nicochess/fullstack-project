@@ -1,4 +1,4 @@
-<p align="center" width="160px"><img src="./images/project-icon.png"></p>
+<p align="center"><img src="./images/project-icon.png" width="160px"></p>
 
 <h1 align="center">Seu Hotel</h1>
 
