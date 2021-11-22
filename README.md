@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white">
 </p>
 
-<p align="center">Para visualizar o projeto você pode clicar no botão abaixo <a href="https://nicochess.github.io/fullstack-project/"><img src="./images/click-here.png" width="40px"></a></p>
+<p align="center"><i><b>Para visualizar o projeto você pode clicar no botão abaixo</b></i><br><a href="https://nicochess.github.io/fullstack-project/"><img src="./images/click-here.png" width="110px"></a></p>
 
 - Para clonar o projeto em sua máquina
 ```
